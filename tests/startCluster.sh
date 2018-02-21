@@ -11,7 +11,7 @@ TASKID=$SLURM_PROCID
 
 if [ $TASKID -eq 0 ]; then 
     echo "Starting a SPARK MASTER on node ${SPARK_MASTER_IP} and the hostname is $(hostname)"
-    $SPARK_HOME/sbin/start-master.sh & 
+    $SPARK_HOME/sbin/start-master.sh
 else
     echo "Starting a SPARK WORKER on node $(hostname)"
     sleep 30s
