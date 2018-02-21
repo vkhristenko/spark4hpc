@@ -13,4 +13,5 @@ if [ $TASKID -eq 0 ]; then
     echo "Starting a SPARK MASTER on node ${SPARK_MASTER_IP} and the hostname is $(hostname)"
 else
     echo "Starting a SPARK WORKER on node $(hostname)"
+    sleep 30s
 fi
