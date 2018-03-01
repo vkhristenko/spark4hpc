@@ -13,11 +13,11 @@ if [ $TASKID -eq 0 ]; then
     echo "Starting a SPARK MASTER on node ${SPARK_MASTER_IP} and the hostname is $(hostname)"
     $SPARK_HOME/sbin/start-master.sh
     eval jps
-    sleep 1m
+    sleep 3m
 else
     echo "Starting a SPARK WORKER on node $(hostname)"
     sleep 10s
     $SPARK_HOME/sbin/start-slave.sh spark://$SPARK_MASTER_IP:$SPARK_MASTER_PORT
     eval jps
-    sleep 10s
+    sleep 2m
 fi
